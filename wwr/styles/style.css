@@ -4,22 +4,19 @@
 --heading-font: "Lexend", "Lucida Grande", "Trebuchet MS";
 --paragraph-font: "Exo 2", "Courier New", "Papyrus";
 }
-.home-title {
+.home-title, .blog-title {
     font-family: var(--heading-font);
     color:white;
     font-size: 2em;
     margin-top: 10px;
-}
-#content {
-    max-width: 1600px;
-    margin: 0 auto;
 }
 nav a {
     font-family: var(--heading-font);
     text-align: center;
     color: #FFEAB8;
     text-decoration: none;
-    padding: 35px; 
+    padding: 35px;
+    flex: 1;
 }
 nav {
     display: flex;
@@ -75,11 +72,19 @@ body {
     font-size: 22px;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 header {
     background-color:#020E54;
     display: grid;
     grid-template-columns: 150px auto;
+}
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+    flex: 1;
 }
 #background {
     background-color: #FFEAB8;
@@ -94,7 +99,7 @@ h4 {
     font-family: var(--heading-font);
     color: #020E54;
 }
-.book, .join {
+.join, .book {
     font-family: var(--heading-font);
     background-color: white;
     color: #020E54;
@@ -181,6 +186,86 @@ h4 {
     box-shadow: 5px 5px #020E54;
     margin-top: 100px;
 }
+.blog-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.summer-msg, .highlights-card, .wilderness-card {
+    background-color: #FFEAB8;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+}
+.summer-msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffeab8;
+    padding: 20px;
+    text-align: center;
+}
+#banner-msg {
+    text-align: center;
+    margin-top: -100px;
+    color: white;
+    margin-bottom: 50px;
+}
+#banner-img {
+    width: 100%;
+}
+#summer-msg h2, #summer-msg p {
+    border: solid #020E54;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wilderness-card {
+    display: grid;
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / -1;
+}
+
+.wilderness-content {
+    flex: 1; 
+    padding-right: 20px;
+    padding: 10px; 
+}
+
+.wilderness-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.wilderness-content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.image-column img {
+    width: 250px; 
+    height: auto;
+    border-radius: 8px; 
+}
+.book-box {
+    margin-top: 50px;
+}
 footer {
     font-family: var(--paragraph-font);
     background-color:#020E54;
@@ -191,6 +276,8 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    position: relative;
 }
 footer a {
     font-family: var(--paragraph-font);
@@ -206,7 +293,7 @@ footer .social img {
     padding-top: 15px;
 }
 @media screen and (max-width: 900px) {
-    #hero, .home-grid {
+    #hero, .home-grid, .blog-grid{
         display: block;
         height: auto;
     }
@@ -244,7 +331,41 @@ footer .social img {
         display: block;
         margin: 0 auto;
     }
+    #banner, .home-grid {
+        display: block;
+        height: auto;
+    }
+    #banner {
+        margin-top: 0;
+    }
+    #banner-msg {
+        margin-top: 0;
+    }
+    #banner-msg h1 {
+        color: #6f7364;
+    }
+
     footer {
         margin-top: 25px;
+    }
+}@media (max-width: 768px) {
+    .wilderness-card {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .wilderness-content {
+        padding-right: 0;
+        margin-bottom: 20px; 
+    }
+
+    .image-column {
+        gap: 20px; 
+    }
+
+    .image-column img {
+        width: 100%;
+        max-width: 400px; 
     }
 }
