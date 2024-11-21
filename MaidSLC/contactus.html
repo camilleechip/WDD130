@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid in the City SLC | Cleaning Services</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/logo.png" alt="Dry Oar Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html"> Cleaning Services</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+        </header>
+        <div id="room">
+            <div id="room-box">
+                <img id="room-img" src="images/organized_room.jpg" alt="People enjoying white water rafting">
+            </div>
+            <section id="room-msg">
+                <h1 class="services-title">Contact Us</h1>
+            </section>
+        </div>
+        <main>
+            <div id="contact-container">
+                <section id="info-paragraph">
+                    <h1 class="hours">Hours of Operation</h1>
+                    <p>Monday-Friday</p>
+                    <p>8am-4pm</p>
+                </section>
+                
+                <div id="feedback"></div>
+                    <form action="/my-handling-form-page" method="post">
+                        <p>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="user_name" />
+                        </p>
+                        <p>
+                            <label for="mail">Email:</label>
+                            <input type="email" id="mail" name="user_email" />
+                        </p>
+                        <p>
+                            <label for="msg">Message:</label>
+                            <textarea id="msg" name="user_message"></textarea>
+                        </p>
+                        <p class="button">
+                            <button type="submit">Send your message</button>
+                        </p>
+                    </form>
+                </section>
+            </div>
+            <section id="extra-information">
+                <div class="extra-information-container">
+                    <p>
+                    The standard duration of a clean varies, but typically a 
+                    cleaning session could range from 3 hours to 5 hours for a standard 
+                    clean, depending on the size of the space. This could cost anywhere from $120-$200.</p>
+                    <img src="images/organized_bathroom.jpg" alt="Organized bathroom" id="extra-image">
+                </div>
+            </section>
+
+            <style>
+        
+                body {
+                    text-align: center;
+                }
+                form {
+                    padding: 1em;
+                    border: 1px solid #020e54;
+                    border-radius: 1em;
+                }
+                p + p {
+                    margin-top: 1em;
+                  }
+                  
+                  label {
+                    display: inline-block;
+                    min-width: 90px;
+                    text-align: right;
+                  }
+                  
+                  input,
+                  textarea {
+                    font: 1em sans-serif;
+                    width: 300px;
+                    box-sizing: border-box;
+                    border: 1px solid #999;
+                  }
+                  input:focus,
+                  textarea:focus {
+                    outline-style: solid;
+                    outline-color: #020e54;
+                  }
+                  textarea {
+                    vertical-align: top;
+                    height: 5em;
+                  }
+                  .button {
+                    padding-left: 50px;
+                  }
+                  button {
+                    margin-left: 0.5em;
+                  }
+                  #feedback {
+                    background-color: antiquewhite;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    padding: .5em;
+                    display: none;      
+                }
+                .moveDown {
+                    margin-top: 3em;
+                }
+            </style>
+        </main>
+        <footer>
+            <p>Maid in the City SLC &COPY; 2024 - Camille Huggins</p>
+            <p><a href="site-plan.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook (1).png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const feedbackElement = document.getElementById('feedback');
+        const formElement = document.forms[0];
+        formElement.addEventListener('submit', function(e) {
+            e.preventDefault();
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            feedbackElement.style.display = "block";
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+</body>
+</html>
