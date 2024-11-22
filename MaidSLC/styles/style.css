@@ -1,12 +1,12 @@
 .home-title {
-    font-family: var(--heading-font);
+    font-family: 'Trebuchet MS';
     color: #a683c9;
     font-size: 2.5em;
     margin: 0;
     font-family: 'Trebuchet MS';
 }
 nav a {
-    font-family: var(--heading-font);
+    font-family: 'Trebuchet MS';
     text-align: center;
     color: #fffde9;
     text-decoration: none;
@@ -53,12 +53,14 @@ h4 {
     font-size: 1.5em;
     color:#2a1812;
     margin-top: 10px;
+    font-family: 'Trebuchet MS';
 }
 .msg p {
-    font-size: 1.5em;
+    font-size: 1.4em;
     border: 2px solid #a683c9;
     padding: 10px;
     margin: 20px 0;
+    font-family:'Arial';
 }
 .mirror-img {
     width: 70%;
@@ -196,12 +198,12 @@ footer {
     margin-top: 10px;
 }
 footer a {
-    font-family: var(--paragraph-font);
+    font-family: 'arial';
     color:#fffde9;
     text-decoration: none;
 }
 footer a:hover {
-    font-family: var(--paragraph-font);
+    font-family: 'arial';
     color:#2a1812;
     text-decoration: underline;
 }
