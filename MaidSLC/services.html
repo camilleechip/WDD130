@@ -11,17 +11,18 @@
     <div id="content">
         <header>
             <a id="logo_link" href="index.html">
-                <img class="logo" src="images/logo.png" alt="Maid in the CCity Logo">
+                <img class="logo" src="images/logo.png" alt="Maid in the City Logo">
             </a>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="services.html"> Cleaning Services</a>
+                <a href="services.html">Cleaning Services</a>
                 <a href="contactus.html">Contact Us</a>
             </nav>
         </header>
-            <section id="services-msg">
-                <h1 class="services-title"> Cleaning Services</h1>
-            </section>
+        
+        <section id="services-msg">
+            <h1 class="services-title">Cleaning Services</h1>
+        </section>
 
         <section class="image-container">
             <div class="content-wrapper">
@@ -32,17 +33,18 @@
                         <img src="images/before_photo.JPG" style="width:50%" alt="Before Photo of Sink">
                         <div class="text">Before</div>
                     </div>
-              
+                  
                     <div class="mySlides fade">
                         <div class="numbertext">2 / 2</div>
                         <img src="images/after_photo.JPG" style="width:50%" alt="After Photo of Sink">
-                    <div class="text">After</div>
-                </div>
+                        <div class="text">After</div>
+                    </div>
               
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-              </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
                 <div class="paragraph">
                     <p>Looking for inspiration? Look no further! We offer a diverse collection 
                     of stunning photos that will not only impress but also inspire you to trust 
@@ -54,31 +56,34 @@
                     refrigerators, and any other storage areas. Move-out cleans are priced at $50 per hour, per 
                     cleaner. Additional services beyond the standard cleaning are considered deep cleaning and are 
                     charged at an extra $10 per hour.</p>
-            </div>
-            <br>
+                </div>
+            </div> <!-- End of content-wrapper -->
       
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-      </div>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </section> <!-- End of image-container -->
 
-    <footer>
-        <p>Maid in the City SLC &copy; 2024 - Camille Huggins</p>
-        <p><a href="site-plan.html">Site Plan</a></p>
-        <p><a href="contactus.html">Contact Us</a></p>
-        <div class="social">
-            <a href="https://facebook.com" target="_blank">
-                <img src="images/facebook.png" alt="fb icon">
-            </a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="images/twitter.png" alt="twitter icon">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram.png" alt="instagram icon">
-            </a>
-        </div>
-    </footer>
+        <footer>
+            <p>Maid in the City SLC &copy; 2024 - Camille Huggins</p>
+            <p><a href="site-plan.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div> <!-- End of content -->
+
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
@@ -100,14 +105,14 @@
             if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+                slides[i].style.display = "none";
             }
             for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].className = dots[i].className.replace(" active", "");
             }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
-            }
+        }
     </script>
 </body>
 </html>
