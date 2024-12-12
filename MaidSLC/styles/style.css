@@ -114,6 +114,9 @@ main {
     padding: 20px;
     text-align: center;
 }
+#content p {
+    font-family: 'Arial';
+}
 #extra-information {
     margin-top: 40px;
     padding: 20px;

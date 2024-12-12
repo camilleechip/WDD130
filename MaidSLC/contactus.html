@@ -6,6 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maid in the City SLC | Cleaning Services</title>
     <link rel="stylesheet" href="styles/style.css">
+    
+    <style>
+        body {
+            text-align: center;
+        }
+        form {
+            padding: 1em;
+            border: 1px solid #020e54;
+            border-radius: 1em;
+        }
+        p + p {
+            margin-top: 1em;
+        }
+        label {
+            display: inline-block;
+            min-width: 90px;
+            text-align: right;
+        }
+        input,
+        textarea {
+            font: 1em sans-serif;
+            width: 300px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+        }
+        input:focus,
+        textarea:focus {
+            outline-style: solid;
+            outline-color: #020e54;
+        }
+        textarea {
+            vertical-align: top;
+            height: 5em;
+        }
+        .button {
+            padding-left: 50px;
+        }
+        button {
+            margin-left: 0.5em;
+        }
+        #feedback {
+            background-color: antiquewhite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: .5em;
+            display: none;      
+        }
+        .moveDown {
+            margin-top: 3em;
+        }
+    </style>
 </head>
 <body>
     <div id="content">
@@ -36,27 +89,27 @@
                 </section>
                 
                 <div id="feedback"></div>
-                    <form action="/my-handling-form-page" method="post">
-                        <p>
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="user_name" />
-                        </p>
-                        <p>
-                            <label for="mail">Email:</label>
-                            <input type="email" id="mail" name="user_email" />
-                        </p>
-                        <p>
-                            <label for="msg">Message:</label>
-                            <textarea id="msg" name="user_message"></textarea>
-                        </p>
-                        <p class="button">
-                            <button type="submit">Send your message</button>
-                        </p>
-                    </form>
-                </section>
+                <form action="/my-handling-form-page" method="post">
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name">
+                    </p>
+                    <p>
+                        <label for="mail">Email:</label>
+                        <input type="email" id="mail" name="user_email">
+                    </p>
+                    <p>
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </p>
+                    <p class="button">
+                        <button type="submit">Send your message</button>
+                    </p>
+                </form>
             </div>
+            
             <section id="extra-information">
-                <div class="extra-information-container">
+                <div class="extra-information-container" role="presentation">
                     <p>
                     The standard duration of a clean varies, but typically a 
                     cleaning session could range from 3 hours to 5 hours for a standard 
@@ -64,62 +117,6 @@
                     <img src="images/organized_bathroom.jpg" alt="Organized bathroom" id="extra-image">
                 </div>
             </section>
-
-            <style>
-        
-                body {
-                    text-align: center;
-                }
-                form {
-                    padding: 1em;
-                    border: 1px solid #020e54;
-                    border-radius: 1em;
-                }
-                p + p {
-                    margin-top: 1em;
-                  }
-                  
-                  label {
-                    display: inline-block;
-                    min-width: 90px;
-                    text-align: right;
-                  }
-                  
-                  input,
-                  textarea {
-                    font: 1em sans-serif;
-                    width: 300px;
-                    box-sizing: border-box;
-                    border: 1px solid #999;
-                  }
-                  input:focus,
-                  textarea:focus {
-                    outline-style: solid;
-                    outline-color: #020e54;
-                  }
-                  textarea {
-                    vertical-align: top;
-                    height: 5em;
-                  }
-                  .button {
-                    padding-left: 50px;
-                  }
-                  button {
-                    margin-left: 0.5em;
-                  }
-                  #feedback {
-                    background-color: antiquewhite;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    padding: .5em;
-                    display: none;      
-                }
-                .moveDown {
-                    margin-top: 3em;
-                }
-            </style>
         </main>
         <footer>
             <p>Maid in the City SLC &COPY; 2024 - Camille Huggins</p>
